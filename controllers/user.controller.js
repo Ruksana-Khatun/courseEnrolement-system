@@ -1,6 +1,6 @@
 import User from "../models/user.model.js";
 import ErrorApp from "../utils/error.utils.js";
-const register = async (error,req,res,next)=>{
+const register = async (req,res,next)=>{
     const {fullname,email,password} = req.body;
     if(!fullname || !email || !password){
         return next (new ErrorApp("Please provide all fields",400))
