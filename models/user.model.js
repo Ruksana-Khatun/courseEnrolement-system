@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
-import bcrypt from "bcryptjs";
+import bcrypt, { compare } from "bcryptjs";
+import jwt from "jsonwebtoken";
+
 const userSchema = new mongoose.Schema(
   {
     fullName: {
@@ -45,11 +47,14 @@ const userSchema = new mongoose.Schema(
   });
   
   userSchema.methods={
-    generateJWTToken: async function () {
-      return await jwt.sign({ id: this._id, email:this.email,subscription:this.subscription }, process.env.JWT_SECRET, {
+    generateJWTToken:  function () {
+      return jwt.sign({ id: this._id, email: this.email, subscription: this.subscription, role: this.role }, process.env.JWT_SECRET, {
         expiresIn: process.env.JWT_EXPIRES_IN,
       });
     },
+    comparePassword: async function(plainTextPassword){
+      return await bcrypt.compare(plainTextPassword, this.password)
+    }
   }
 
 

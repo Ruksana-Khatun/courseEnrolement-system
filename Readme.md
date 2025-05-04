@@ -7,5 +7,5 @@
 ## dotenv for Storing environment variables securely
 ## multer for Handling file uploads (images, PDFs)
 ## nodemailer for Sending emails (OTP, notifications)
-## tumhe pta hi ek batt sirf ati hi  bss sur kch nhi smjhi yara or gpt per bharose mt kr bra bhut parshan krta hi 
+
 ## i can add middlware eroro but why am  adding eroro
