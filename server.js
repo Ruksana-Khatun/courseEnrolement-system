@@ -28,3 +28,5 @@ const startServer = async () => {
         process.exit(1);
     }
 };
+console.log("Server is running on port 5000")
+startServer();
