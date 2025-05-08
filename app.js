@@ -4,7 +4,6 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
-import ErrorApp from "./utils/error.utils.js"; // custom error class
 import { errorMiddleware } from "./middlewares/error.Middleware.js"; 
 const app = express();
 //middleware

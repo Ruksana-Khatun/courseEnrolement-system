@@ -8,6 +8,7 @@ const isLoggedIn= async(req,res,next)=>{
     }
     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
         if (err) {
+          console.log("JWT Error:", err.message); 
           return res.status(401).json({ success: false, message: "Invalid or expired token" });
         }
         req.user = decoded;

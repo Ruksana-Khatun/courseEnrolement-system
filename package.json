@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "test": "cross-env NODE_ENV=test jest"
   },
   "keywords": [],
   "author": "Ruksana khatun",
@@ -14,7 +15,7 @@
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "body-parse": "^0.1.0",
-    "cloudinary": "^2.6.0",
+    "cloudinary": "^2.6.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
