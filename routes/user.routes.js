@@ -1,7 +1,7 @@
 // File: routes/user.routes.js
 import express from 'express';
 import { isLoggedIn } from '../middlewares/auth.middlewares.js';
-import {login, register, logout, getProfile} from '../controllers/user.controller.js'; 
+import {login, register, logout, getProfile, forgotPassword, resetPassword, changePassword, updateUser} from '../controllers/user.controller.js'; 
 import upload from '../middlewares/multer.middleware.js';
 import { v2 as cloudinary } from 'cloudinary';
 
@@ -26,7 +26,9 @@ router.post('/register',upload.single("avatar"), register);
 router.post('/login',login)
 router.get('/logout',logout)
 router.get('/me', isLoggedIn,getProfile)
-// router.get('/forgot-password')
-// router.post('/reset-password')
+router.post('/reset',forgotPassword)
+router.post('/reset/:resetToken',resetPassword)
+router.post('change-password',isLoggedIn,changePassword)
+router.post('/update/:id',isLoggedIn,upload.single("avatar"),updateUser)
 
 export default router;
