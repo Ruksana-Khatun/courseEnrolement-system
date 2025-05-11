@@ -38,8 +38,10 @@ app.get("/api/v1",(req,res)=>{
 //     })
 // Import all routes
 import userRoutes from './routes/user.routes.js';
+import courseRoutes from './routes/course.routes.js';
 
 app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/course", courseRoutes);
 
 // Default catch all route - 404
 app.all("/*", (req, res) => {
