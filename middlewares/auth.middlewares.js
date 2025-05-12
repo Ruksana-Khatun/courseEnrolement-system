@@ -14,11 +14,22 @@ const isLoggedIn= async(req,res,next)=>{
         req.user = decoded;
         next();
       }); 
+     
     }catch{
         return next(new ErrorApp("Invalid or expired token" ,401))
     }
    
 }
+ const authorizedRoles=(...roles)=> {
+        return (req, res, next) => {
+            const currentUserRole = req.user.role;
+          if (!roles.includes(currentUserRole)) {
+            return next(new ErrorApp('you do not have permission to access this route',403));
+          }
+          next();
+        };
+      };
 export {
-    isLoggedIn
+    isLoggedIn,
+    authorizedRoles
 };
