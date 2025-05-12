@@ -101,20 +101,23 @@ const createCourse = async (req, res,next) => {
 
 }
 console.log("Course created successfully2:");
-const updateCourse = async (req, res) => {
+const updateCourse = async (req, res,next) => {
   const { title, description, category, thumbnail } = req.body;
   const id = req.params.id;
   try {
     const course = await Course.findByIdAndUpdate(
       id,
       {
-        title,
-        description,
-        category,
-        thumbnail,
+        $set: req.body,
       },
-      { new: true }
+      {
+        new:true,
+        runValidators: true,
+      }
     );
+    if (!course) {
+     return next(new ErrorApp("Course with given id does not", 404));
+    }
     res.status(200).json({
       success: true,
       message: "Course updated successfully",
@@ -124,10 +127,14 @@ const updateCourse = async (req, res) => {
       return next(new ErrorApp(error.message, 500));
     }
 }
-const removeCourse = async (req, res) => {
+const removeCourse = async (req, res,next) => {
   const id = req.params.id;
   try {
-    const course = await Course.findByIdAndDelete(id);
+    const course = await Course.findById(id);
+    if (!course) {
+      return next(new ErrorApp("Course with given id does not exist", 404));
+    }
+    await course.deleteOne();
     res.status(200).json({
       success: true,
       message: "Course deleted successfully",
