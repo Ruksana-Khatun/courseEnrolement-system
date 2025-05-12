@@ -1,4 +1,4 @@
-# i want to make LMS project so i will be build look at whole thing. andN remember
+# i want to make LMS project so i will be build look at whole thing. and please dont forget!
 ## npm i express mongoose cors cookie-parse body-parse nodemon bcryptjs cloudinary dotenv multer nodemailer --save
 ## express for server mongoose for database cors for middleware different origins ke beech HTTP requests ko allow karne ke liye.
 ## cookie-parse for cookie store body-parse for middleware nodemon for server run Package
