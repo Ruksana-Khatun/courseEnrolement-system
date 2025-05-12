@@ -3,6 +3,8 @@ dotenv.config();
 import app from "./app.js";
 import connectionToDB from "./config/dbConection.js";
 import cloudinary from './config/cloudinary.config.js';
+
+
 const PORT = process.env.PORT || 5000;
 
 cloudinary.config({
@@ -21,7 +23,7 @@ const startServer = async () => {
 
         // Start Express server
         app.listen(PORT, () => {
-            console.log(`Server is running in ${process.env.NODE_ENV} mode on port ${PORT}`);
+            console.log(`Server is running in mode on port ${PORT}`);
         });
     } catch (error) {
         console.error('Error starting server:', error);

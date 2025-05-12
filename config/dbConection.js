@@ -15,5 +15,4 @@ const connectionToDB = async () => {
         process.exit(1);
     }
 };
-
 export default connectionToDB;
