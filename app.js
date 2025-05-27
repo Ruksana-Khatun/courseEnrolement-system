@@ -4,7 +4,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
-
+import paymentRoutes from "./routes/payment.routes.js";
 import { errorMiddleware } from "./middlewares/error.Middleware.js"; 
 
 const app = express();
@@ -35,6 +35,7 @@ import courseRoutes from './routes/course.routes.js';
 
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/course", courseRoutes);
+app.use("/api/v1/payment", paymentRoutes);
 
 // Default catch all route - 404
 app.all("/*", (req, res) => {
