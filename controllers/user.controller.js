@@ -38,7 +38,8 @@ const register = async (req, res, next) => {
                 public_id: email,
                 secure_url: '',
             },
-        });
+          
+        }); 
 
         if (!user) {
             return next(new ErrorApp('User registration failed, please try again later', 400));
