@@ -28,6 +28,10 @@ const paymentSchema = new mongoose.Schema({
     razorpay_subscription_id: {
         type: String,
         default: null,
+         status: {
+        type: String,
+        default: null,
+    }
     },
     razorpay_signature: {
         type: String,
