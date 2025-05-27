@@ -21,7 +21,7 @@ router.route('/verify')
     isLoggedIn,
     verifySubscription
 );
-router.route('unsubScribe')
+router.route('/unsubScribe')
 .post(
      isLoggedIn,    
     cancelSubscribe
