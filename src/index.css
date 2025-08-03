@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-black text-white;
+   position: relative;
+   max-width: 1440px;
+   margin: auto;
+  
+
+}
+
+/* Custom table styles to ensure black background */
+.admin-table {
+  background-color: black !important;
+}
+
+.admin-table th,
+.admin-table td {
+  background-color: black !important;
+  color: white !important;
+}
+
+.admin-table tbody tr {
+  background-color: black !important;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #1f2937 !important;
+}
