@@ -1,31 +1,39 @@
-# i want to make LMS project so i will be build look at whole thing. and please dont forget!
-## npm i express mongoose cors cookie-parse body-parse nodemon bcryptjs cloudinary dotenv multer nodemailer --save
-## express for server mongoose for database cors for middleware different origins ke beech HTTP requests ko allow karne ke liye.
-## cookie-parse for cookie store body-parse for middleware nodemon for server run Package
-## bcryptjs for 	Password hashing for security
-## cloudinary for Image & file storage on the cloud
-## dotenv for Storing environment variables securely
-## multer for Handling file uploads (images, PDFs)
-## nodemailer for Sending emails (OTP, notifications)
 
-## i can add middlware eroro but why am  adding eroro
 
-=======
-## i can add middlware eroro but why am i  adding error
-## i am adding error beacuse of that any error occure 
-## i can give my own error middlware that's why i am adding error ok
-## other problem we have that why am adding timestamp true beacuse 
-## if we are not adding then we have to add createdAt: {
- ## type: Date,
- ## default: Date.now
-## }
+# course Enrolment system
 
-## that's why i am writing timestamp true and 2nd major thing is 
-## createdAt – kab document create hua  
-## updatedAt – kab document last time update hua that's why am i adding 
-## other problem is if we are using type module then i will do for export
-## export deafult means isme sirf ek hi main chij export kr rhe hi 
-## or if you want  2,4 main chije export krne to apko sirf export {}
-## likh ker app 2,4,5 chije export kr skte hi ok! thanak you 
-## one thing i told you 
+# This project is an online  provide course enrollemnt system  and learning platform where users can purchase and enroll in courses to learn anytime, anywhere.
+# The system will have the following features:
+# 1. User registration and login
+# 2. Course listing and purchase
+# 3. Course enrollment and completion tracking
+# 4. User profile management
+# 5. Payment gateway integration
+# 6. Admin panel for course management and user management
+# 7. User can view course details and description
+# 8. User can enroll in course and pay for it
+# 9. User can view enrolled course and course status
+# 10. Admin can add, edit and delete courses
+# 11. Admin can view and manage user accounts
+# many more like  Edit profile rest password change password ..
 
+## 🚀 How to Clone and Run the Project Locally
+## Follow these steps to set up the project on your local machine:
+### Step 1: Clone the Repository
+
+
+```
+git clone https://github.com/Ruksana-Khatun/courseEnrolement-system.git
+cd course courseEnrolement-system
+npm install
+nodemon server.js
+cd client
+npm install
+npm start
+The app will now be running at http://localhost:3000
+
+```
+Here is Screen shot picture 
+![![alt text](image-1.png)](image.png)
+
+ 
