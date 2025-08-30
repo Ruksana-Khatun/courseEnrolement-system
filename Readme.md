@@ -34,6 +34,13 @@ The app will now be running at http://localhost:3000
 
 ```
 Here is Screen shot picture 
-![![alt text](image-1.png)](image.png)
+<img width="1055" height="490" alt="image" src="https://github.com/user-attachments/assets/ee729efa-3235-41c5-8651-440af7c29ca1" />
+<img width="1048" height="486" alt="image" src="https://github.com/user-attachments/assets/dd342c80-689b-47a3-bbd6-843226ce4e8b" />
+<img width="1059" height="510" alt="image" src="https://github.com/user-attachments/assets/12dfa9c9-5dff-467c-9977-22ee371207f5" />
+<img width="1045" height="482" alt="image" src="https://github.com/user-attachments/assets/257b9962-f897-48b1-8ee3-63d697addf51" />
+
+
+
+
 
  
